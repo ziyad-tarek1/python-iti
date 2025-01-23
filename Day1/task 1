@@ -1,0 +1,18 @@
+print('Please enter the requested data')
+
+name = input('Enter your full name (ex: Ziad Tarek Saaed): ')
+age = eval(input('Enter your age: '))
+faculty = input('Enter your faculty: ')
+birth_date = input('Enter your birth date (ex: YYYY-MM-DD): ')
+graduation_year = input('Enter your graduation year or expected graduation year: ')
+
+# new_age = age +1
+# print(new_age)
+
+
+print('\nThe data received from the user is:')
+print(f'Full Name: {name}')
+print(f'Age: {age}')
+print(f'Faculty: {faculty}')
+print(f'Birth Date: {birth_date}')
+print(f'Graduation Year: {graduation_year}')
