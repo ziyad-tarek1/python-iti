@@ -2,11 +2,10 @@
 # 	Task: Create a list of server hostnames and perform operations on it.
 # 		Create a list of server hostnames (e.g., ["server1", "server2", "server3"]).
 # 		Add a new server to the list.
-
 # 		Remove a server from the list.
 # 		Check if a specific server exists in the list.
-
 # 		Print all servers in the list.
+
 
 # Get user input for the list of servers
 hosts_input = input('Enter the list of servers separated by spaces (e.g., server1 server2 server3): \n')
