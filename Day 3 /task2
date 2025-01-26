@@ -1,0 +1,10 @@
+# 2-Use a tuple to store immutable server configuration details.
+# 	Create a tuple containing server configuration details (e.g., ("192.168.1.1", "8080", "root")).
+# 	Unpack the tuple into separate variables for IP, port, and username.
+# 	Print the configuration details.
+
+server_config = ("192.168.1.1", "8080", "root")
+
+ip, port, username = server_config
+
+print(f"IP: {ip}, Port: {port}, Username: {username}")
