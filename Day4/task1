@@ -1,0 +1,3 @@
+# Read and print the contents of a text file
+with open(r'C:\Users\Ziyad\Desktop\pythoniti\myfile.txt', 'r') as file:
+    print(file.read())
