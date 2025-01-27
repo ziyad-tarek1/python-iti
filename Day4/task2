@@ -1,0 +1,5 @@
+# Write a string to a text file (create if it doesn't exist)
+file = open(r'C:\Users\Ziyad\Desktop\pythoniti\myfile2.txt', 'w')
+file.write("Hello to myfile2\n")
+file.close()
+print("Text written to myfile2.txt")
