@@ -1,0 +1,7 @@
+# Read a file line by line and print with line numbers
+file = open(r'C:\Users\Ziyad\Desktop\pythoniti\myfile2.txt', 'r')
+line_num = 1  # Start counting from 1
+for line in file:
+    print(f"Line {line_num}: {line.strip()}")
+    line_num += 1
+file.close()
