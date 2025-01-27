@@ -1,0 +1,10 @@
+# Search and replace a specific word in a file
+file1 = open(r'C:\Users\Ziyad\Desktop\pythoniti\source.txt', 'r')
+replace_word = file1.read().replace("hello", "heelloloooo")
+file1.close()
+
+file1 = open(r'C:\Users\Ziyad\Desktop\pythoniti\source.txt', 'w')
+file1.write(replace_word)
+file1.close()
+
+print("Replaced 'hello' with 'heelloloooo' in the file.")
