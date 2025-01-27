@@ -1,0 +1,5 @@
+# Append text to an existing file
+file = open(r'C:\Users\Ziyad\Desktop\pythoniti\myfile2.txt', 'a')
+file.write("Appending new text.\n")
+file.close()
+print("Text appended to myfile2.txt.")
