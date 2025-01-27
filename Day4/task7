@@ -1,0 +1,11 @@
+# Merge two text files into a third file
+file1 = open(r'C:\Users\Ziyad\Desktop\pythoniti\file1.txt', 'r')
+file2 = open(r'C:\Users\Ziyad\Desktop\pythoniti\file2.txt', 'r')
+merged_file = open(r'C:\Users\Ziyad\Desktop\pythoniti\merged.txt', 'w')
+merged_file.write(file1.read())
+merged_file.write(file2.read())
+
+file1.close()
+file2.close()
+merged_file.close()
+print("file1 and file2 merged into merged.txt")
