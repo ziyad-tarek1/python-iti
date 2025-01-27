@@ -1,0 +1,9 @@
+# Count the number of words in a text file
+file = open(r'C:\Users\Ziyad\Desktop\pythoniti\source.txt', 'r')
+word_count = 0
+
+for line in file:
+    word_count += len(line.split())
+file.close()
+
+print(f"The file contains {word_count} words.")
