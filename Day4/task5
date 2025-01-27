@@ -1,0 +1,8 @@
+# Copy contents from one file to another
+source_file = open(r'C:\Users\Ziyad\Desktop\pythoniti\source.txt', 'r')
+destination_file = open(r'C:\Users\Ziyad\Desktop\pythoniti\destination.txt', 'w')
+destination_file.write(source_file.read())
+
+source_file.close()
+destination_file.close()
+print("Contents copied from source.txt to destination.txt.")
