@@ -1,0 +1,81 @@
+from abc import abstractmethod,ABC
+import math
+
+
+# abstract class shape class inside it a constrictor and a calculate area  // calculate area is a abstract method 
+class Shape(ABC):
+    def __init__(self):
+        pass
+
+    @abstractmethod
+    def calculate_area(self):
+        pass
+
+
+#  class point inside it a constrictor and __str__ and __add__ and  __sub__  and from it two object
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+
+    def __sub__(self, other):
+        return Point(self.x - other.x, self.y - other.y)
+
+# lass called line from two poinst (contractor , point1 and point2) declate the __str__ and __len__
+# __len__ contain two object to the points to calculate the space from the two points 
+
+class Line:
+    def __init__(self, point1, point2):
+        self.point1 = point1
+        self.point2 = point2
+
+    def __str__(self):
+        return f"Line from {self.point1} to {self.point2}"
+
+    def __len__(self):
+        return int(math.sqrt((self.point2.x - self.point1.x)**2 + (self.point2.y - self.point1.y)**2))
+
+
+
+
+# a abstract triangle class inhurate from the shape class and tell me what the object you will create from it
+
+class Triangle(Shape):
+    def __init__(self, side1, side2, side3):
+        super().__init__()
+        self.side1 = side1
+        self.side2 = side2
+        self.side3 = side3
+
+    def calculate_area(self):
+        # Using Heron's formula to calculate the area of a triangle
+        s = (self.side1 + self.side2 + self.side3) / 2
+        return math.sqrt(s * (s - self.side1) * (s - self.side2) * (s - self.side3))
+
+
+class ConcreteTriangle(Triangle):
+    def __init__(self, side1, side2, side3):
+        super().__init__(side1, side2, side3)
+
+
+
+# test
+point1 = Point(1, 2)
+point2 = Point(4, 6)
+line = Line(point1, point2)
+
+
+print("Point 1:", point1)
+print("Point 2:", point2)
+print("Line:", line)
+print("Length of Line:", len(line))
+
+
+triangle = ConcreteTriangle(3, 4, 5)
+print("Area of Triangle:", triangle.calculate_area())
